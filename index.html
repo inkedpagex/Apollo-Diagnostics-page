@@ -6,6 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apollo Diagnostics - Blood Test Lab</title>
     <style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 500%;
+        }
+        .slides img {
+            width: 20%;
+            border: 2px solid #ccc; /* Adjust or remove as needed */
+        }
+        .dots {
+            text-align: center;
+            padding: 10px;
+        }
+        .dots span {
+            cursor: pointer;
+            padding: 5px;
+            margin: 0 2px;
+            background: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dots span.active {
+            background: #717171;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider">
+    <div class="slides" id="slides">
+        <!-- Add your images here -->
+        <img src="images/photo1.jpg" alt="Image 1">
+        <img src="images/photo2.jpg" alt="Image 2">
+        <img src="images/photo3.jpg" alt="Image 3">
+        <img src="images/photo4.jpg" alt="Image 4">
+        <img src="images/photo5.jpg" alt="Image 5">
+    </div>
+</div>
+
+<div class="dots" id="dots">
+    <span class="dot" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<script>
+    let slideIndex = 0;
+    let slides = document.getElementById('slides');
+    let dots = document.querySelectorAll('.dot');
+
+    function showSlides() {
+        slideIndex++;
+        if (slideIndex > 4) slideIndex = 0;
+        slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === slideIndex);
+        });
+    }
+
+    setInterval(showSlides, 3000); // Change slide every 3 seconds
+</script>
+
+</body>
+</html>
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
