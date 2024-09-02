@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apollo Diagnostics - Blood Test Lab</title>
+    <title>Apollo Diagnostics Blood Lab Tests</title>
     <style>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+        }
         .slider {
             position: relative;
             max-width: 100%;
             margin: auto;
             overflow: hidden;
+            margin-bottom: 20px;
         }
         .slides {
             display: flex;
@@ -24,7 +36,7 @@
         }
         .slides img {
             width: 20%;
-            border: 2px solid #ccc; /* Adjust or remove as needed */
+            border: 2px solid #ccc;
         }
         .dots {
             text-align: center;
@@ -41,28 +53,78 @@
         .dots span.active {
             background: #717171;
         }
+        .whatsapp-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .whatsapp-link a {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
 
-<div class="slider">
-    <div class="slides" id="slides">
-        <!-- Add your images here -->
-        <img src="images/photo1.jpg" alt="Image 1">
-        <img src="images/photo2.jpg" alt="Image 2">
-        <img src="images/photo3.jpg" alt="Image 3">
-        <img src="images/photo4.jpg" alt="Image 4">
-        <img src="images/photo5.jpg" alt="Image 5">
+<header>
+    <h1>Apollo Diagnostics Blood Lab Tests</h1>
+</header>
+
+<div class="content">
+    <h2>Our Lab Test Services</h2>
+    <ul>
+        <li>Complete Blood Count (CBC) - ₹500</li>
+        <li>Lipid Profile - ₹700</li>
+        <li>Thyroid Function Test (TFT) - ₹600</li>
+        <li>Liver Function Test (LFT) - ₹800</li>
+        <li>Kidney Function Test (KFT) - ₹650</li>
+        <li>Blood Glucose Test - ₹300</li>
+        <li>Vitamin D Test - ₹1200</li>
+    </ul>
+
+    <!-- Slider Section -->
+    <div class="slider">
+        <div class="slides" id="slides">
+            <!-- Replace with your uploaded image paths -->
+            <img src="images/photo1.jpg" alt="Image 1">
+            <img src="images/photo2.jpg" alt="Image 2">
+            <img src="images/photo3.jpg" alt="Image 3">
+            <img src="images/photo4.jpg" alt="Image 4">
+            <img src="images/photo5.jpg" alt="Image 5">
+        </div>
+    </div>
+
+    <div class="dots" id="dots">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <!-- WhatsApp Link Section -->
+    <div class="whatsapp-link">
+        <a href="https://wa.link/lbcfkr" target="_blank">Contact Us on WhatsApp</a>
     </div>
 </div>
 
-<div class="dots" id="dots">
-    <span class="dot" onclick="currentSlide(0)"></span>
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-</div>
+<footer>
+    <p>&copy; 2024 Apollo Diagnostics. All Rights Reserved.</p>
+</footer>
 
 <script>
     let slideIndex = 0;
@@ -83,186 +145,3 @@
 
 </body>
 </html>
-
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        .header {
-            background-color: #003366; /* Dark Blue */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .hero {
-            background-color: #eaf4f9;
-            padding: 30px 20px;
-            text-align: center;
-        }
-        .hero h1 {
-            color: #003366;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            margin-bottom: 20px;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 12px 20px;
-            color: white;
-            background-color: #007bff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .content {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-        }
-        .features {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .features ul {
-            list-style: none;
-            padding: 0;
-        }
-        .features li {
-            margin: 10px 0;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-        }
-        .features li::before {
-            content: "✔";
-            color: #007bff;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        .price-list {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            text-align: left;
-        }
-        .price-list table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .price-list th, .price-list td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        .price-list th {
-            background-color: #005f9e;
-            color: white;
-        }
-        .footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        .contact-link {
-            color: #FFD700;
-            text-decoration: underline;
-            margin-top: 10px;
-            display: inline-block;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Header Section -->
-    <header class="header">
-        <h2>Apollo Diagnostics Blood Test Lab</h2>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Comprehensive Blood Testing Services</h1>
-        <p>Ensure your health and well-being with accurate and reliable diagnostics at Apollo Diagnostics.</p>
-        <a href="https://wa.link/lbcfkr" class="cta-button">Book Your Test Now</a>
-    </section>
-
-    <!-- Content Section -->
-    <section class="content">
-        <div class="features">
-            <h2>Why Choose Apollo Diagnostics?</h2>
-            <ul>
-                <li>Advanced diagnostic technology and certified labs.</li>
-                <li>Accurate results delivered quickly and efficiently.</li>
-                <li>Experienced professionals ensuring painless sample collection.</li>
-                <li>Wide range of blood tests and health check-ups.</li>
-                <li>Convenient home sample collection services.</li>
-                <li>Online access to your reports anytime, anywhere.</li>
-                <li>Strict adherence to safety protocols for all procedures.</li>
-                <li>Trusted by healthcare professionals and patients across India.</li>
-                <li>Affordable pricing with no hidden costs.</li>
-            </ul>
-        </div>
-
-        <!-- Price List Table -->
-        <div class="price-list">
-            <h2>Blood Test Price List</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Test Name</th>
-                        <th>Price (INR)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Complete Blood Count (CBC)</td>
-                        <td>₹300</td>
-                    </tr>
-                    <tr>
-                        <td>Thyroid Profile (T3, T4, TSH)</td>
-                        <td>₹600</td>
-                    </tr>
-                    <tr>
-                        <td>Lipid Profile</td>
-                        <td>₹700</td>
-                    </tr>
-                    <tr>
-                        <td>Liver Function Test (LFT)</td>
-                        <td>₹750</td>
-                    </tr>
-                    <tr>
-                        <td>Diabetes Profile (HbA1c, FBS, PPBS)</td>
-                        <td>₹500</td>
-                    </tr>
-                    <tr>
-                        <td>Vitamin D Test</td>
-                        <td>₹1200</td>
-                    </tr>
-                    <tr>
-                        <td>Kidney Function Test (KFT)</td>
-                        <td>₹800</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>For more information, visit our official website: <a href="https://wa.link/lbcfkr" class="contact-link">Apollo Diagnostics</a></p>
-        <p>Contact us at: +91 9870849217</p>
-        <a href="https://wa.link/lbcfkr" class="contact-link">Book an Appointment</a>
-    </footer>
-
-</body>
-  </html>
-                                            
